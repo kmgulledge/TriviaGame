@@ -3,19 +3,15 @@
 /* Body 
 -------------------------------------------------- */
 body{
-	background-color: #ffffff;
-	background-image: url("../images/gbg.jpg");
-  background-size: 1600px 860px;
-	background-repeat: no-repeat;
+	background-color: #000000;
+	background-image: url("../images/gbg2.jpg");
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   font-family: 'Righteous', cursive;
   color: white;
 
 }
-
-.button {
-    background-color: #4CAF50;
 
 /*.container-fluid {
   margin: 0 auto;
