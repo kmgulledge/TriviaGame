@@ -1,14 +1,45 @@
-// Create a function that creates the start button and initial screen
+// White belt coding ninja javascript
 
-// Set up Clock
+// Populate Score
+function populate() {
+    if (quiz.isEnded()){
+        showScores();
+    } else {
+        // show question
+        var element = document.getElementById("question");
+        element.innerHTML = quiz.getQuestionIndex().text;
 
-// Set up Questions
+        //show choices
+        var choices = quiz.getQuestionIndex().choices;
+        for(var i = 0; i < choices.length; i++) {
+            var element = document.getElementById("choice" + i);
+            element.innerHTML = choices[i];
+        }
+    }
+};
 
-// Set up Correct Answers
+function showScores() {
+    var gameOverHTML = "<h1>Result</h1>";
+    gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
+    var element = document.getElementById("quiz");
+    element.innerHTML = gameOverHTML;
+}
 
-// Set up Wrong Answers
+// Question Variable
+var questions = [
+    new Question("Goonies never say what?", ["Die", "Love", "Time to eat", "Ice Cream"], "Die"),
+    new Question("What year was the Goonies made?", ["1984", "1985", "1986", "1987"], "1985"),
+    new Question("Where did they find the treasure map?", ["Basement", "Garage", "Attic", "Living Room"], "Attic"),
+    new Question("Who did the Truffle Shuffle?", ["Mikey", "Brand", "Mouth", "Chunk"] , "Chunk"),
+    new Question("Who's treasure were they looking for?", ["Redbeard", "Blackbeard", "One Eye Willy", "Two Eye Willy"], "One Eye Willy"),
+    new Question("What was the name of the town the Goonies were from?", ["Toronto", "Astoria", "Charlotte", "Dallas"], "Astoria"),
+    new Question("What does Mouth tease Brand about?", ["Flunking his driver's test", "Andy turning him down for a date", "His sweat band", "His sweet bike"], "Flunking his driver's test"),
+    new Question("Who kissed Andy in the cave?", ["Brand", "Mikey", "Chunk", "Data"], "Mikey"),
+    new Question("What superhero shirt was Sloth wearing?", ["Batman", "Flash", "Superman", "Green Lantern"], "Superman"),
+    new Question("What was the name of the treasure hunter they read about?", ["Indiana Jones", "Allan Quatermain", "Jonny Quest", "Chester Copperpot"], "Chester Copperpot")
+    ];
 
-// Set up Unanswered
+    var quiz = new Quiz(questions);
+    console.log()
 
-// Set up Restart Button
-
+    populate();

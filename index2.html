@@ -31,50 +31,46 @@
     <!-- Google Font Link -->
     <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 
-    <!-- Dropping That Sick Goonies Beat. Thank You Cyndi Lauper! It's Good Enough For Me!!! 
-    <embed src="assets/music/goonies.mp3"
-      loop="true" 
-      autoplay="true" 
-      width="0" 
-      height="0">
-    </embed -->
-
   </head>
 
   <!-- Body of Page Here -->
   <body>
 
-    
-
-      <!-- Conatiner Starts Here -->
-      <div class="container-fluid text-center">
-    
-        <!-- 1st Row Starts Here -->
-        <div class="row">
+      <div class="grid">
       
-          <!-- 1st Column Starts Here -->
-          <div class="col-md-12 text-center">
+        <div id="quiz">
+          
+          <h1>quiz</h1>
 
-            <div>
-    
-             
+          <hr style="margin-bottom: 20px">
 
-             <div>
+          <p id="question"></p>
 
-             
+            <div class="buttons">
 
-            
+            <button id="btn0"><span id="choice0"></span></button>
+            <button id="btn1"><span id="choice1"></span></button>
+            <button id="btn2"><span id="choice2"></span></button>
+            <button id="btn3"><span id="choice3"></span></button>
 
-            
-
-            </div></div></div></div></div>
             </div>
 
-          </div>
+          <hr style="margin-top: 50px">
+
+          <footer>
+            
+            <p id="progress">Question x of y</p>
+
+          </footer>
+
 
         </div>
 
       </div>
+
+      <script src="assets/javascript/quiz_controller.js"></script>
+      <script src="assets/javascript/question.js"></script>
+      <script src="assets/javascript/app.js"></script>
 
   <!-- jQuery CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -3,8 +3,9 @@
 /* Body 
 -------------------------------------------------- */
 body{
-	background-color: #000000;
-	background-image: url("../images/gbg2.jpg");
+	background-color: #eeeeee;
+	background-image: url("");
+  background-size: 800px 700px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -13,29 +14,59 @@ body{
 
 }
 
-/*.container-fluid {
-  margin: 0 auto;
-  text-align: center;
-}
 
-.col-md-12 {
-  margin: 0 auto;
-}*/
-
-.row {
-    margin-top: 15px auto;
-    text-align: center;
-  }
-
-.page-header {
+.grid {
+    width: 600px;
+    height: 500px;
     margin: 0 auto;
-    text-align: center;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border-radius: 50px;
+    border: 2px solid #cbcbcb;
+    box-shadow: 10px 15px 5px #cbcbcb;
 }
 
-  /* Text style
--------------------------------------------------- */
-h1 {
+.grid h1 {
+    font-family: sans-serif;
+    background-color: #57636e;
+    font-size: 60px;
     text-align: center;
-    text-decoration: underline;
-    color:  #8B4513;
-  }
+    color: #fff;
+    padding: 2px 0px ;
+    border-radius: 50px;
+}
+
+.grid #question {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #5e6772;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+#btn0, #btn1, #btn2, #btn3 {
+    background-color: #778897;
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    border: 1px solid #1d3c6a;
+    border-radius: 50px;
+    margin: 10px 40px 10px 0px;
+    padding: 10px 10px;
+}
+
+#progress {
+    color: #2b2b2b;
+    font-size: 18px;
+}
+
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+    cursor: pointer;
+    background-color: #57636e;
+}
+
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+    outline: 0;
+}
