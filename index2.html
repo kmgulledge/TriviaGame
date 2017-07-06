@@ -72,7 +72,7 @@
                 = 'Time Left: ' + c_minutes + ' minutes ' + c_seconds + ' seconds ' ;
 
                 if(total_seconds <=0){
-                setTimeout('document.quiz.submit()',1);
+                setTimeout( function ( ) { alert( "uhoh your done" ); }, 100000 );
                 } else {
                 total_seconds = total_seconds -1;
                 c_minutes = parseInt(total_seconds/60);
@@ -80,6 +80,7 @@
                 setTimeout("CheckTime()",1000);
                 }}
                 setTimeout("CheckTime()",1000);
+                
               </script>
 
           </footer>
