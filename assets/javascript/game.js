@@ -6,7 +6,7 @@ function Question(text, choices, answer) {
     this.answer = answer;
 };
 
-Question.prototype.correctAnswer = function(choice) {
+Question.object.correctAnswer = function(choice) {
     return choice === this.answer;
 };
 
@@ -16,15 +16,15 @@ function Quiz(questions) {
     this.questionIndex = 0;
 }
 
-Quiz.prototype.getQuestionIndex = function() {
+Quiz.object.getQuestionIndex = function() {
     return this.questions[this.questionIndex];
 }
 
-Quiz.prototype.isEnded = function() {
+Quiz.object.isEnded = function() {
     return this.questions.length === this.questionIndex;
 }
 
-Quiz.prototype.guess = function(answer) {
+Quiz.object.guess = function(answer) {
     this.questionIndex++;
 
     if(this.getQuestionIndex().correctAnswer(answer)) {
