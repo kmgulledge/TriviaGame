@@ -4,11 +4,11 @@ function Question(text, choices, answer) {
     this.text=text;
     this.choices = choices;
     this.answer = answer;
-};
+}
 
 Question.prototype.correctAnswer = function(choice) {
     return choice === this.answer;
-};
+}
 
 function Quiz(questions) {
     this.score = 0;
@@ -30,7 +30,7 @@ Quiz.prototype.guess = function(answer) {
     if(this.getQuestionIndex().correctAnswer(answer)) {
         this.score++;
     }
-};
+}
 
 // Populate Score
 function populate() {
