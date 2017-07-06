@@ -1,5 +1,37 @@
 // White belt coding ninja javascript
 
+function Question(text, choices, answer) {
+    this.text=text;
+    this.choices = choices;
+    this.answer = answer;
+};
+
+Question.prototype.correctAnswer = function(choice) {
+    return choice === this.answer;
+};
+
+function Quiz(questions) {
+    this.score = 0;
+    this.questions = questions;
+    this.questionIndex = 0;
+}
+
+Quiz.prototype.getQuestionIndex = function() {
+    return this.questions[this.questionIndex];
+}
+
+Quiz.prototype.isEnded = function() {
+    return this.questions.length === this.questionIndex;
+}
+
+Quiz.prototype.guess = function(answer) {
+    this.questionIndex++;
+
+    if(this.getQuestionIndex().correctAnswer(answer)) {
+        this.score++;
+    }
+};
+
 // Populate Score
 function populate() {
     if (quiz.isEnded()){
@@ -11,13 +43,13 @@ function populate() {
 
         //show choices
         var choices = quiz.getQuestionIndex().choices;
-        for(var i = 0; i < choices.length; i++) {
+        for(var i = 0; i< choices.length; i++) {
             var element = document.getElementById("choice" + i);
             element.innerHTML = choices[i];
             guess("btn" + i, choices[i]);
         }
 
-        showProgress();
+        
     }
 };
 
@@ -33,7 +65,7 @@ function showProgress(){
     var currentQuestionNumber = quiz.questionIndex = 1;
     var element = document.getElementById("progress");
     element.innerHTML - "Question " + currentQuestionNumber + " of " + quiz.questions.length;
-}
+};
 
 
 
